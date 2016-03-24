@@ -11,7 +11,7 @@ Track by allows Angular to speed up our `ng-repeat`s massively - let's take a lo
 
 ## Performance
 
-Now that we've started to build our Angular applications, we can start to thing about scaling them. There are a few neat tricks we can use because as we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try and try and drive 5,000 cars in both directions. Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
+Now that we've started to build our Angular applications, we can start to think about scaling them. As we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try and drive 5,000 cars in both directions. There are a few neat tricks we can use to imporvoe performance.  Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
 
 ## What is track by?
 
