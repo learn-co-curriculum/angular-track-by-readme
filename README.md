@@ -9,13 +9,17 @@ Track by allows Angular to speed up our `ng-repeat`s massively - let's take a lo
 - Describe "track by" clause
 - Write an ng-repeat that utilises "track by"
 
+## Performance
+
+Now that we've started to build our Angular applications, we can start to thing about scaling them. There are a few neat tricks we can use because as we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try and try and drive 5,000 cars in both directions. Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
+
 ## What is track by?
 
 Track by allows us to tell Angular what to identify unique items in our arrays, so Angular can tell when to remove it from the DOM correctly.
 
 If we were to have an `ng-repeat` repeating items of news, Angular will display all of the news items on the page.
 
-Later on, if we were to refresh the data (refresh the news), Angular will have to rebuild every DOM node in the repeat, even if two of the articles are the same.
+Later on, if we were to refresh the data (refresh the news), Angular will have to rebuild every DOM node in the repeat, even if two of the articles are the same. Any change in the array will result in a rebuild of the DOM - Angular has no way of telling what items in the new array are the same in the last array.
 
 To prevent this, we can use `track by` in our `ng-repeat`s. This tells Angular what to use to identify the news article.
 
@@ -51,7 +55,7 @@ var newsItems = [{
 }];
 ```
 
-Angular would then delete the original two DOM nodes, and then render three DOM nodes in its place - this is because it doesn't know what makes each news article unique.
+Angular would then delete the original two DOM nodes, and then render three DOM nodes in its place - this is because it doesn't know what makes each news article uniques (it can't tell what has changed, so assumes it all has).
 
 ## Using track by
 
