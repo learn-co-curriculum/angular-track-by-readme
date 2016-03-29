@@ -11,7 +11,7 @@ Track by allows Angular to speed up our `ng-repeat`s massively - let's take a lo
 
 ## Performance
 
-Now that we've started to build our Angular applications, we can start to think about scaling them. As we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try and drive 5,000 cars in both directions. There are a few neat tricks we can use to imporvoe performance.  Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
+Now that we've started to build our Angular applications, we can start to think about scaling them. As we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try and drive 5,000 cars in both directions. There are a few neat tricks we can use to improve performance.  Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
 
 ## What is track by?
 
@@ -84,3 +84,5 @@ Will turn into this:
 Letting Angular know to track by the `id` property on the news articles.
 
 If we go back to when we update the data - instead of removing two DOM nodes and creating three, Angular just creates one new DOM node at the top of the list - awesome!
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-track-by-readme'>Angular Track By </a> on Learn.co and start learning to code for free.</p>
