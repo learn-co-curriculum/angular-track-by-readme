@@ -15,9 +15,9 @@ Now that we've started to build our Angular applications, we can start to think 
 
 ## What is track by?
 
-Track by allows us to tell Angular what to identify unique items in our arrays, so Angular can tell when to remove it from the DOM correctly.
+Track by allows us to identify JavaScript objects in an `ng-repeat` list so that Angular won't `$destroy` or re-create DOM nodes unnecessarily.
 
-If we were to have an `ng-repeat` repeating items of news, Angular will display all of the news items on the page.
+For example, if we were to have an `ng-repeat` repeating the news, Angular will display all of the news items on the page.
 
 Later on, if we were to refresh the data (refresh the news), Angular will have to rebuild every DOM node in the repeat, even if two of the articles are the same. Any change in the array will result in a rebuild of the DOM - Angular has no way of telling what items in the new array are the same in the last array.
 
