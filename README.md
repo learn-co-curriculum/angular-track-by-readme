@@ -11,7 +11,7 @@ Track by allows Angular to speed up our `ng-repeat`s massively - let's take a lo
 
 ## Performance
 
-Now that we've started to build our Angular applications, we can start to think about scaling them. As we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try and drive 5,000 cars in both directions. There are a few neat tricks we can use to improve performance.  Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
+Now that we've started to build our Angular applications, we can start to think about scaling them. As we start to display more data and allow complex user interactions with that data, our application can become slow, much like if we build a one-way street and try to drive 5,000 cars in both directions. There are a few neat tricks we can use to improve performance.  Each performance enhancement we use in Angular is like adding an extra road, allowing things to become much quicker.
 
 ## What is track by?
 
@@ -55,7 +55,7 @@ var newsItems = [{
 }];
 ```
 
-Angular would then delete the original two DOM nodes, and then render three DOM nodes in its place - this is because it doesn't know what makes each news article uniques (it can't tell what has changed, so assumes it all has).
+Angular would delete the original two DOM nodes and then render three DOM nodes in its place. This is because it doesn't know what makes each news article unique. Angular can't tell what has changed, so it assumes everything has.
 
 ## Using track by
 
@@ -81,8 +81,6 @@ Will turn into this:
 </ul>
 ```
 
-Letting Angular know to track by the `id` property on the news articles.
-
-If we go back to when we update the data - instead of removing two DOM nodes and creating three, Angular just creates one new DOM node at the top of the list - awesome!
+We've let Angular know to track news articles by their `id` property. Returning to our earlier example of updating the data, instead of removing two DOM nodes and creating three, Angular now creates one new DOM node at the top of the list. Awesome!
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-track-by-readme'>Angular Track By </a> on Learn.co and start learning to code for free.</p>
